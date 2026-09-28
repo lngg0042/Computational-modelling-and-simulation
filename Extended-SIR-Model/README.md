@@ -4,25 +4,40 @@
 
 A Python-based epidemiological simulation that extends the traditional **SIR (Susceptible-Infected-Recovered) model** by incorporating **healthcare pressure** and **nonlinear recovery rates**.
 
-The model was developed to investigate how changes in disease transmission, hospitalisation, and healthcare capacity can influence epidemic dynamics, including scenarios where healthcare systems become overwhelmed.
+The model was developed to investigate one question: *What happens when hospitals are overwhelmed and recovery slows down?* By varying disease transmission, hospitalisation, and healthcare capacity, the model shows how an overloaded healthcare system changes the course of an outbreak.
 
 ## Objectives
 
-* Simulate the spread of an infectious disease using an extended SIR model.
-* Investigate the impact of different transmission and hospitalisation parameters.
-* Model changes in recovery rates under healthcare pressure.
-* Compare epidemic behaviour under different scenarios.
-* Analyse the differences between discrete- and continuous-time simulations.
+1. **Extend the SIR model** by adding a hospital population \(H\), where recovery rates decrease as hospital occupancy increases.
+2. **Simulate the model in discrete time** to study how hospital strain, admission rates, and key parameters affect the outbreak.
+3. **Simulate the model in continuous time** across small, medium, and severe outbreaks and different parameter settings.
+4. **Analyse the long-term behaviour of the epidemic**, including its steady states and stability, to determine whether the outbreak dies out or can persist over time.
 
 ## Model
 
-The extended model builds upon the standard SIR framework:
+$$
+\begin{aligned}
+\frac{dS}{dt} &= -\beta S I \\
+\frac{dI}{dt} &= \beta S I - \gamma(H)\, I \\
+\frac{dR}{dt} &= \gamma(H)\, I \\
+\frac{dH}{dt} &= \rho I - \eta H \\
+\gamma(H) &= \frac{\gamma_0}{1 + \alpha H}
+\end{aligned}
+$$
 
-* **S — Susceptible:** Individuals who can become infected.
-* **I — Infected:** Individuals currently infected and able to transmit the disease.
-* **R — Recovered:** Individuals who have recovered from the infection.
+| Symbol | Meaning |
+|---|---|
+| $S, I, R$ | Susceptible, infected, recovered fractions |
+| $H$ | Hospitalised fraction (hospital load) |
+| $\beta$ | Transmission rate |
+| $\gamma_0$ | Baseline recovery rate |
+| $\alpha$ | Hospital pressure sensitivity (higher means faster healthcare collapse) |
+| $\rho$ | Fraction of infected who are hospitalised |
+| $\eta$ | Hospital discharge rate |
 
-Additional healthcare-related variables and nonlinear recovery behaviour are incorporated to represent the effects of increasing pressure on healthcare capacity.
+**Assumptions:** closed population, fixed hospitalisation fraction $\rho$, constant discharge rate $\eta$, recovery depends only on $H$, and recovered individuals are permanently immune.
+
+---
 
 ## Methods
 
@@ -34,22 +49,13 @@ Additional healthcare-related variables and nonlinear recovery behaviour are inc
 * Parameter sensitivity analysis
 * Data visualisation
 
-## Experiments
+## Key Findings
 
-The simulation was conducted across different combinations of:
-
-* Disease transmission rates
-* Hospitalisation rates
-* Healthcare capacity
-* Recovery parameters
-
-The resulting epidemic curves were analysed to understand how changes in these parameters affect infection peaks, recovery dynamics, and healthcare pressure.
-
-## Results
-
-The simulations demonstrate how healthcare capacity can influence epidemic dynamics. Under higher healthcare pressure, changes in recovery behaviour can affect the duration and severity of an outbreak.
-
-Different parameter configurations were compared to observe how transmission and hospitalisation assumptions influence the resulting epidemic curves.
+- **Higher $\alpha$** (hospitals collapse faster) gives higher infection peaks and a longer epidemic.
+- **Higher $\rho$** sends more people to hospital, which spikes $H$ and slows recovery.
+- Strong hospital feedback can **delay and amplify** the infection peak and even cause second waves.
+- The only realistic equilibrium is **disease-free**. It is stable when $\beta S < \gamma_0$ and unstable when $\beta S > \gamma_0$, where a small infection can restart an outbreak.
+- **Takeaway:** hospital capacity is critical in large outbreaks. An overloaded "lifeboat" makes the whole epidemic worse.
 
 ## Technologies
 
