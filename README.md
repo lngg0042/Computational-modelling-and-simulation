@@ -3,7 +3,7 @@
 A collection of computational modelling and simulation projects developed in Python, applying mathematical models, numerical methods, and stochastic simulations to analyse real-world systems.
 
 ### Projects
-
+---
 #### 1. Newton's Law of Cooling Simulation
 
 Simulated thermal cooling dynamics (Newton's Law of Cooling) using exponential models and Taylor series approximations. Analysed the effects of ambient temperature and cooling rates, including floating-point errors, system sensitivity and numerical accuracy.
@@ -27,7 +27,7 @@ Integrated Markov Chains and Monte Carlo methods and conducted over 50 simulatio
 **Techniques**: Agent-Based Modelling · Markov Chains · Monte Carlo Simulation · Stochastic Modelling · Matplotlib · Seaborn
 
 ### Technologies
-
+---
 Python
 NumPy
 Matplotlib
