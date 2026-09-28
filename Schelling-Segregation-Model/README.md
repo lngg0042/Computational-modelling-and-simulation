@@ -48,12 +48,12 @@ $$
 ## Key Findings
 
 - **Segregation emerges quickly.** Even with a low threshold of 0.3, the segregation index roughly doubles (about 0.35 to 0.69) within about 20 steps.
-- 
+  
   <img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/44cfb337-e63b-4eab-a384-fc6416239648" />
 - **Randomness breaks up segregation.** As the random-move probability rises from 0.01 to 0.20, segregation falls from about 0.69 to 0.37, close to the random starting level.
 - **Randomness also adds uncertainty.** With random moves, results vary more between runs and never fully settle.
 - **Location preference raises happiness.** With $\alpha = 0.3$, agents' happiness scores shift higher and spread out, because living near the desirable spot adds a bonus.
-- 
+  
   <img width="989" height="590" alt="image" src="https://github.com/user-attachments/assets/7044579e-103a-48a8-95fc-4cf9d290798e" />
 
 
