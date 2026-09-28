@@ -69,7 +69,7 @@ $$
 ```text
 Extended-SIR-Model/
 ├── README.md
-├── simulation.ipynb
+├── sir_model.ipynb
 ├── project_brief.pdf
 ```
 
