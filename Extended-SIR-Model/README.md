@@ -69,8 +69,8 @@ $$
 ```text
 Extended-SIR-Model/
 ├── README.md
-├── FIT3139_Assignment2.ipynb
-├── FIT3139_Assignment2_Brief.pdf
+├── simulation.ipynb
+├── project_brief.pdf
 ```
 
 ## Academic Context
