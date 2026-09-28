@@ -26,9 +26,7 @@ Integrated Markov Chains and Monte Carlo methods and conducted over 50 simulatio
 **Techniques**: Agent-Based Modelling · Markov Chains · Monte Carlo Simulation · Stochastic Modelling · Matplotlib · Seaborn
 
 ## Technologies
-Python
-NumPy
-Matplotlib
+Python, NumPy, Matplotlib
 Seaborn
 Numerical Methods
 Mathematical Modelling
