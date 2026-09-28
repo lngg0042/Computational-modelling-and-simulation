@@ -37,8 +37,8 @@ Build a numerical model for a client whose hardware is limited. The project sets
 ```text
 Newton-Law-of-Cooling/
 ├── README.md
-├── FIT3139_Assignment1.ipynb
-└── FIT3139_Assignment1_Brief.pdf
+├── cooling_simulation.ipynb
+└── cooling_simulation_brief.pdf
 ```
 
 ## Academic Context
