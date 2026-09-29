@@ -1,4 +1,4 @@
-# FIT3139 Computational modelling and simulation
+# Computational modelling and simulation
 
 A collection of computational modelling and simulation projects developed in Python, applying mathematical models, numerical methods, and stochastic simulations to analyse real-world systems.
 
